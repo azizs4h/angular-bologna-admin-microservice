@@ -1,0 +1,81 @@
+.sidebar{
+    position: fixed;
+    z-index: 999;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 310px;
+    padding: 48px 0 48px 10px;
+    box-shadow: 0px 0px 20px #333333;
+    background-color:#f6424c !important;
+    margin-right: auto;
+    transform: translate(-320px, 0);
+    transition: transform .7s linear;
+    overflow-y: scroll;
+  }
+  .sidebar-logo{
+    background-image: url("../../../assets/images/konya-teknik-uzun.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 200px;
+    height: 70px;
+    margin: auto;
+  }
+  .sidebar-logo-wrapper{
+    background-color: #ffffff;
+    padding: 20px 0px;
+    border-radius: 5px;
+
+  }
+  .anchor{
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    padding-left: 10px;
+  }
+  .anchor:hover{
+    background-color: #3333333d;
+  }
+  .list-group-item{
+    background-color: transparent;
+    border: unset;
+    color: white  !important;
+    padding: .75rem .60rem;
+
+  }
+  .list-group{
+    display: inline;
+    color: white  !important;
+    text-transform: uppercase;
+    font-size: small;
+  }
+
+  .router-a-active {
+    background-color: #3333333d;
+  }
+  .router-link-active {
+    background-color: #3333333d;
+  }
+  .router-a-active .anchor{
+    background-color: #3333333d;
+  }
+  .open{
+    transform: translate(0, 0);
+    transition: transform .7s linear;
+  }
+  ::-webkit-scrollbar{
+    opacity: 1;
+  }
+  .fas{
+    line-height: unset;
+    margin-top: 1rem;
+  }
+  p{
+    padding: 0 10px;
+    margin-top: 1rem;
+  }
+  .dropdown-toggle::after{
+    display: none;
+  }

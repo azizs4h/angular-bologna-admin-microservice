@@ -1,0 +1,160 @@
+<div class="container py-5">
+    <form #bilgiformu="ngForm" (ngSubmit)="gonder()" novalidate>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün İsmi:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control"  #isim="ngModel" name="department_name" [ngClass]="{ 'is-invalid': isim.invalid && isim.touched}" [(ngModel)]="tumbilgiler.department_name" placeholder="Bölümün İsmini Giriniz" required>
+              <small *ngIf=" isim.invalid && isim.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Başkanı :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #baskan="ngModel" [ngClass]="{'is-invalid': baskan.invalid && baskan.touched}" name="head_of_department" [(ngModel)]="bolumbilgisi.head_of_department" placeholder="Bölümün Başkanı Bilgisini Giriniz" required>
+              <small *ngIf=" baskan.invalid && baskan.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+          <div class="col-3">
+            <p>Bölüm Hakkında :</p>
+          </div>
+          <div class="col-9">
+            <input type="text" class="form-control" #hakkinda="ngModel" [ngClass]="{ 'is-invalid': hakkinda.invalid && hakkinda.touched}" placeholder="Bölüm Hakkında Bilgisini Giriniz" name="about_of_department" [(ngModel)]="bolumbilgisi.about_of_department" required>
+            <small *ngIf="hakkinda.invalid && hakkinda.touched">Bu Bilgi Gereklidir.</small>
+          </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Kabul Şartları :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #kabul="ngModel" [ngClass]="{ 'is-invalid': kabul.invalid && kabul.touched}" name="admission_requirements" [(ngModel)]="bolumbilgisi.admission_requirements" placeholder="Kabul Şartları Bilgisini Giriniz" required>
+              <small *ngIf=" kabul.invalid && kabul.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölüm Koordinatorünün :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control"  #bolumkoordinatoru="ngModel" [ngClass]="{ 'is-invalid': bolumkoordinatoru.invalid && bolumkoordinatoru.touched}" name="akts_coordinator" [(ngModel)]="bolumbilgisi.akts_coordinator" placeholder="Bölüm Koordinatorünün İsmini Giriniz" required>
+              <small *ngIf=" bolumkoordinatoru.invalid && bolumkoordinatoru.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Değerlendirme Ve Not Verme :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #notverme="ngModel" [ngClass]="{ 'is-invalid': notverme.invalid && notverme.touched}" name="assessment_and_grading" [(ngModel)]="bolumbilgisi.assessment_and_grading" placeholder="Değerlendirme Ve Not Verme Bilgisini Giriniz" required>
+              <small *ngIf=" notverme.invalid && notverme.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+          <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Vizyonu :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #vizyon="ngModel" [ngClass]="{ 'is-invalid': vizyon.invalid && vizyon.touched }" name="vision_of_department" [(ngModel)]="bolumbilgisi.vision_of_department" placeholder="Bölümün Vizyon Bilgisini Giriniz" required>
+              <small *ngIf=" vizyon.invalid && vizyon.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Misyonu :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #misyon="ngModel" [ngClass]="{ 'is-invalid': misyon.invalid && misyon.touched }" name="mission_of_department" [(ngModel)]="bolumbilgisi.mission_of_department" placeholder="Bölümün Misyon Bilgisini Giriniz" required>
+              <small *ngIf=" misyon.invalid && misyon.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+          </div>
+
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Amacı :</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #amaci="ngModel" [ngClass]="{ 'is-invalid': amaci.invalid && amaci.touched }" name="purpose_of_department" [(ngModel)]="bolumbilgisi.purpose_of_department" placeholder="Bölümün Amacı Bilgisini Giriniz" required>
+              <small *ngIf="amaci.invalid && amaci.touched">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Eğitim Dili:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #dil="ngModel" [ngClass]="{'is-invalid': dil.invalid && dil.touched}" placeholder="Bölümün Eğitim Dili Bilgisini Giriniz" name="education_language" [(ngModel)]="bolumbilgisi.education_language" required>
+              <small *ngIf=" dil.invalid && dil.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Ölçme Ve Değerlendirme İlkeleri:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #olcme="ngModel" [ngClass]="{'is-invalid': olcme.invalid && olcme.touched}" placeholder="Bölümün Ölçme Ve Değerlendirme İlkelerini Giriniz" name="meauserment_and_evaluation_principles" [(ngModel)]="bolumbilgisi.meauserment_and_evaluation_principles" required>
+              <small *ngIf=" olcme.invalid && olcme.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Program Tanımı:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #tanim="ngModel" [ngClass]="{'is-invalid': tanim.invalid && tanim.touched}" placeholder="Bölümün Program Tanımı Bilgilerini Giriniz" name="education_description" [(ngModel)]="bolumbilgisi.education_description" required>
+              <small *ngIf=" tanim.invalid && tanim.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Erasmus Koordinatorü:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #erasmuskoordinator="ngModel" [ngClass]="{'is-invalid': erasmuskoordinator.invalid && erasmuskoordinator.touched}" placeholder="Bölümün Erasmus Koordinatorün Giriniz" name="erasmus_coordinator" [(ngModel)]="bolumbilgisi.erasmus_coordinator" required>
+              <small *ngIf=" erasmuskoordinator.invalid && erasmuskoordinator.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3">
+              <p>Bölümün Farabi Koordinatörünü:</p>
+            </div>
+            <div class="col-9">
+              <input type="text" class="form-control" #farabi="ngModel" [ngClass]="{'is-invalid': farabi.invalid && farabi.touched}"  placeholder="Bölümün Farabi Koordinatörünü Giriniz" name="farabi_coordinator" [(ngModel)]="bolumbilgisi.farabi_coordinator" required>
+              <small *ngIf=" farabi.invalid && farabi.touched ">Bu Bilgi Gereklidir.</small>
+            </div>
+        </div>
+            <div class="row py-3">
+                <div class="col-3">
+                  <p>Bölümün Mezuniyet Şartları:</p>
+                </div>
+                <div class="col-9">
+                  <input type="text" class="form-control" #mezuniyet="ngModel" [ngClass]="{'is-invalid': mezuniyet.invalid && mezuniyet.touched}"  placeholder="Bölümün Mezuniyet Şartlarını Giriniz" name="occupational_profiles_of_graduates" [(ngModel)]="bolumbilgisi.occupational_profiles_of_graduates" required>
+                  <small *ngIf=" mezuniyet.invalid && mezuniyet.touched ">Bu Bilgi Gereklidir.</small>
+                </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-3">
+                <p>Bölümün Önceki Öğrenim Tanımı:</p>
+                </div>
+                <div class="col-9">
+                <input type="text" class="form-control"  #ogrenimtanimi="ngModel" [ngClass]="{'is-invalid': ogrenimtanimi.invalid && ogrenimtanimi.touched}"  placeholder="Bölümün Önceki Öğrenim Tanımı Bilgisini Giriniz" name="recognition_of_prior_learning" [(ngModel)]="bolumbilgisi.recognition_of_prior_learning" required>
+                <small *ngIf=" ogrenimtanimi.invalid && ogrenimtanimi.touched ">Bu Bilgi Gereklidir.</small>  
+              </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-3">
+                <p>Bölümün Üst Derece Programlara Geçiş Bilgisi:</p>
+                </div>
+                <div class="col-9">
+                <input type="text" class="form-control" #derece="ngModel" [ngClass]="{'is-invalid': derece.invalid && derece.touched}" placeholder="Bölümün Üst Derece Programlara Geçiş Bilgisini Giriniz" name="transition_to_upper_programs" [(ngModel)]="bolumbilgisi.transition_to_upper_programs" required>
+                <small *ngIf=" derece.invalid && derece.touched ">Bu Bilgi Gereklidir.</small>
+              </div>
+            </div>
+            <button [disabled]="bilgiformu.form.invalid" class="btn btn-outline-success float-right" [ngClass]="{'btn-outline-danger cursor ':bilgiformu.form.invalid }" type="submit">Kaydet</button>
+      </form>
+</div>

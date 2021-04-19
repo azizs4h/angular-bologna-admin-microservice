@@ -1,0 +1,34 @@
+<div class="container py-5">
+    <div class="row text-center p-3">
+        <div class="col">
+            <h1>Eklenecek Yüksek Okul Bilgilerini Giriniz</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form #form="ngForm" (ngSubmit)="gonder()" novalidate>
+                <div class="row m-1 p-2">
+                    <div class="col">
+                        <input type="text" #isim="ngModel" [ngClass] = "{ 'is-invalid' : isim.touched && isim.invalid}" [(ngModel)]="birim.name" class="form-control" name="enstituismi" placeholder="Enstitü İsmi" required>
+                        <small class="is-invalid" *ngIf="isim.touched && isim.invalid" > Bu Bilgi Gereklidir.</small>
+                    </div>
+                    <div class="col">
+                        <input type="text" #hakkinda="ngModel" [ngClass] = "{ 'is-invalid' : hakkinda.touched && hakkinda.invalid}" [(ngModel)]="birim.about" class="form-control" name="enstituhakkinda" placeholder="Enstitü Hakkında" required>
+                        <small *ngIf="hakkinda.touched && hakkinda.invalid" > Bu Bilgi Gereklidir.</small>
+                    </div>
+                </div>
+                <div class="row m-1 p-2">
+                    <div class="col m p">
+                        <input type="text" #adres="ngModel" [ngClass]="{ 'is-invalid': adres.touched && adres.invalid}" class="form-control" name="enstituadresi" [(ngModel)]="birim.address" placeholder="Enstitü Adresi" required>
+                        <small class="is-invalid" *ngIf="adres.touched && adres.invalid" > Bu Bilgi Gereklidir.</small>
+                    </div>
+                </div>
+                <div class="row m-1 p-2">
+                    <div class="col">
+                        <button class="is-invalid" [disabled]="form.form.invalid" [ngClass] = "{ 'btn-outline-danger cursor' : form.form.invalid}" class="btn btn-outline-success m-1 float-right " style="text-transform:uppercase;" type="submit"> &nbsp;<i class="fas fa-save"></i>  &nbsp; Kaydet </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

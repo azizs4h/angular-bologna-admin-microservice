@@ -1,0 +1,94 @@
+<div class="sidepanel">
+    <div id="sidebar" class="sidebar open">
+        <div class="sidebar-logo-wrapper">
+            <a [routerLink]="['/']"><div class="sidebar-logo"></div></a>
+        </div>
+        <hr style="border: 0.5px solid #ffffff;">
+        <ul class="list-group">
+            <li class="list-group-item" routerLinkActive="router-link-active">
+                <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="anchor dropdown-toggle">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Birim Ekle</p>
+                    <i class="fas fa-caret-down"></i>
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu2">
+                    <li class="list-group-item"  >
+                        <a class="anchor"  [routerLink]="['/doktorabirimiekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >Doktora birimi Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="anchor" [routerLink]="['/yukseklisansbirimiekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >Yüksek lisans birimi Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="anchor" [routerLink]="['/lisansbirimiekle']" routerLinkActive="router-a-active">
+                            <i class="fas fa-plus-circle"></i>
+                            <p >lisans birimi Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="anchor" [routerLink]="['/onlisansbirimiekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >ön lisans birimi Ekle</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item" routerLinkActive="router-link-active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="anchor dropdown-toggle" >
+                    <i class="fas fa-plus-circle"></i>
+                    <p >bölüm Ekle</p>
+                    <i class="fas fa-caret-down"></i>
+                </a>
+                <ul class="collapse list-unstyled " id="homeSubmenu" >
+                    <li class="list-group-item align-middle" >
+                        <a class="anchor" [routerLink]="['/doktorabolumuekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >Doktora bölümü Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item align-middle">
+                        <a class="anchor" [routerLink]="['/yukseklisansbolumuekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >Yüksek lisans bölümü Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item align-middle">
+                        <a class="anchor" [routerLink]="['/lisansbolumuekle']" routerLinkActive="router-a-active">
+                            <i class="fas fa-plus-circle"></i>
+                            <p >lisans bölümü Ekle</p>
+                        </a>
+                    </li>
+                    <li class="list-group-item align-middle">
+                        <a class="anchor" [routerLink]="['/onlisansbolumuekle']" routerLinkActive="router-a-active" >
+                            <i class="fas fa-plus-circle"></i>
+                            <p >ön lisans bölümü Ekle</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <a class="anchor" class="anchor" href="">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Adres Bilgisi</p>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a class="anchor" class="anchor" href="">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>ders Ekle</p>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a class="anchor" class="anchor" href="">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>anasayfa Bilgisi</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

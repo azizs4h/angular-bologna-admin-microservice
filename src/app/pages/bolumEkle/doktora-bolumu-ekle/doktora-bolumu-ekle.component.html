@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 style="text-transform: uppercase;text-align: center;padding-bottom: 75px;padding-top: 50px;">Eklenecek bölümün birimini seçiniz</h1>
+    <ul class="list-group">
+        <li class="list-group-item border rounded custom" *ngFor="let item of birimlistesi">
+          <i class="fas fa-info-circle icon" ></i><a [routerLink]="['/doktorabolumuekle/anadal', item.university_id]" routerLinkActive="router-link-active"  title="Ders İçeriğini Görüntülemek İçin Tıklayınız...">{{ item.name }}</a>
+        </li>
+      </ul> 
+</div>

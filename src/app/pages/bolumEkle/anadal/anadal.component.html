@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 style="text-transform: uppercase;text-align: center;padding-bottom: 75px;padding-top: 50px;">Eklenecek bölümün birimini seçiniz</h1>
+    <ul class="list-group">
+        <li class="list-group-item border rounded custom" *ngFor="let item of majorDepartmentList">
+
+            <ng-template [ngIf]="this.router.url.indexOf('/doktorabolumuekle') > -1 ">
+                <i class="fas fa-info-circle icon" ></i><a [routerLink]="['/doktorabolumuekle/anadal/bolumbilgisiekle', item.major_department_id]" >{{ item.major_department_name }}</a>
+            </ng-template>
+            <ng-template  [ngIf]="this.router.url.indexOf('/lisansbolumuekle') > -1 ">
+                <i class="fas fa-info-circle icon" ></i><a [routerLink]="['/lisansbolumuekle/anadal/bolumbilgisiekle', item.major_department_id]" >{{ item.major_department_name }}</a>
+            </ng-template>
+            <ng-template  [ngIf]="this.router.url.indexOf('/onlisansbolumuekle') > -1 ">
+                <i class="fas fa-info-circle icon" ></i><a [routerLink]="['/onlisansbolumuekle/anadal/bolumbilgisiekle', item.major_department_id]" >{{ item.major_department_name }}</a>
+            </ng-template>
+            <ng-template  [ngIf]="this.router.url.indexOf('/yukseklisansbolumuekle') > -1 ">
+                <i class="fas fa-info-circle icon" ></i><a [routerLink]="['/yukseklisansbolumuekle/anadal/bolumbilgisiekle', item.major_department_id]" >{{ item.major_department_name }}</a>
+            </ng-template>
+
+        </li>
+      </ul> 
+</div>
